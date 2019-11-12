@@ -57,7 +57,7 @@ $.getJSON("Boundary_Lines.geojson", function(geojson) {
   var geojsonLayer = L.geoJson(geojson, {
     style: function(feature) {
       return {
-        fillColor: "gray",
+        color: "gray",
         fillOpacity: 0.5
       };
     },
@@ -73,6 +73,7 @@ $.getJSON("Out_TRI.json", function(geojson) {
     style: function(feature) {
       return {
         color: "turquoise",
+        fillColor: "white",
         fillOpacity: 0.5
       };
     },
@@ -109,6 +110,7 @@ $.getJSON("In_TRI.json", function(geojson) {
     style: function(feature) {
       return {
         color: "black",
+        fillColor: "white",
         fillOpacity: 0.5
       };
     },
@@ -143,3 +145,4 @@ $.getJSON("TRI_Clip.json", function(geojson) {
   }).addTo(map);
   controlLayers.addOverlay(geojsonLayer, "Toxic release sites");
 });
+
