@@ -1,0 +1,31 @@
+#summary {
+  display: flex;
+  flex-direction: row;
+  margin: 0px auto;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+#mapid {
+  display: flex;
+  flex-direction: row;
+  height: 95%;
+  width: 75%;
+  margin: 0px auto;
+  padding: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+#references {
+  display: flex;
+  flex-direction: row;
+  margin: 0px auto;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
