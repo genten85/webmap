@@ -1,127 +1,82 @@
 <html>
-  <head>
-    <title>Impact of Toxic Release Sites in Pierce County</title>
+<head>
+  <title>Impact of Toxic Release Sites in Pierce County</title>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://unpkg.com/jquery@3.4.1/dist/jquery.js"
-      crossorigin=""
-    ></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.js" crossorigin=""></script>
 
-    <!-- Leaflet - Internally Sourced -->
-    <link rel="stylesheet" href="leaflet.css" />
-    <script src="leaflet.js"></script>
+  <!-- Leaflet - Internally Sourced -->
+  <link rel="stylesheet" href="leaflet.css" />
+  <script src="leaflet.js"></script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Homepage</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <link
-      href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900"
-      rel="stylesheet"
-    />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 
-    <!-- Webpage CSS -->
-    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="webmap.css" />
+  <!-- Webpage CSS -->
+  <link rel="stylesheet" href="menu.css" />
+  <link rel="stylesheet" href="default.css" />
+  <link rel="stylesheet" href="webmap.css" />
 
-    <!--[if IE 6
+  <!--[if IE 6
       ]><link href="default_ie6.css" rel="stylesheet" type="text/css"
     /><![endif]-->
 
-    <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
-    <link
-      href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="header-wrapper">
-      <div id="header" class="container">
-        <div id="logo">
-          <h1><a href="#">Darkness</a></h1>
-          <span>
-            <a href="http://templated.co" rel="nofollow">Kevin Tran</a></span
-          >
-        </div>
-        <div id="menu">
-          <ul>
-            <li class="current_page_item">
-              <a
-                href="https://genten85.github.io/darkness/index.html"
-                target="blank"
-                accesskey="1"
-                title=""
-                >Homepage</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://genten85.github.io/darkness/index.html#three-column"
-                target="blank"
-                accesskey="2"
-                title=""
-                >Projects</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://genten85.github.io/darkness/about.html"
-                target="blank"
-                accesskey="4"
-                title=""
-                >About</a
-              >
-            </li>
-            <li>
-              <a href="mailto: genten85@uw.edu" accesskey="3" title=""
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.esri.com/en-us/home"
-                target="blank"
-                accesskey="5"
-                title=""
-                >ESRI</a
-              >
-            </li>
-          </ul>
-        </div>
+  <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+  <link href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css"
+    rel="stylesheet" />
+</head>
+
+<body>
+<div class="menu-wrap">
+  <input type="checkbox" class="toggler" />
+  <div class="hamburger">
+    <div></div>
+  </div>
+  <div class="menu">
+    <div>
+      <div>
+        <ul>
+          <li><a href="https://genten85.github.io/beacon_light/">Home</a></li>
+          <li><a href="https://genten85.github.io/beacon_light/projects.html">Projects</a></li>
+          <li>
+            <a href="https://genten85.github.io/Capstone/" target="blank">Capstone</a>
+          </li>
+          <li><a href="https://genten85.github.io/beacon_light/about.html">About</a></li>
+          <li><a href="mailto: sasuke.085@hotmail.com">Contact</a></li>
+          <li>
+            <a href="https://www.esri.com/en-us/home" target="blank">Esri</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div id="summary">
-      The Environmental Protection Agency annually collects and publishes
-      information related to toxic chemical releases in the United States. Toxic
-      chemicals like arsenic and lead can pose significant cognitive, and
-      physical health risks, especially to children. From an environmental
-      justice standpoint, it is crucial to assess and address the impact toxic
-      chemicals have on marginalized communities. This interactive webmap
-      represents the impact of toxic chemical releases on multi-family and
-      subsidized housing parcels in Pierce County. The impact is evaluated using
-      multi-ring buffers with .5 mile intervals and a max of 2 miles away from
-      the toxic sites. Parcels within the buffer could be negatively impacted
-      (black). Parcels out of it are less affected (turquoise). More than half
-      of the parcels on that webmap are located within 2 miles of a toxic site.
-    </div>
-    <div id="mapid"></div>
-    <script src="webmap.js"></script>
-    <div id="References">
-      References: Pierce County, Environmental Protection Agency<br />
-      Basemap References: CARTO, ESRI, Wikimedia Foundation
-    </div>
-    <div id="wrapper4">
-      <div id="footer" class="container"></div>
-    </div>
-    <div id="copyright" class="container">
-      <p>
-        &copy; Untitled. All rights reserved. | Photos by
-        <a href="http://fotogrph.com/">Fotogrph</a> | Design by
-        <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.
-      </p>
-    </div>
-  </body>
+  </div>
+</div>
+<video autoplay muted loop id="myVideo">
+  <source src="production ID 4423711.mp4" type="video/mp4" />
+</video>
+<div id="title"><h1>Impact of Toxic Release Sites in Pierce County</h1></div>
+  <div id="summary">  
+    The Environmental Protection Agency annually collects and publishes
+    information related to toxic chemical releases in the United States. Toxic
+    chemicals like arsenic and lead can pose significant cognitive, and
+    physical health risks, especially to children. From an environmental
+    justice standpoint, it is crucial to assess and address the impact toxic
+    chemicals have on marginalized communities. This interactive webmap
+    represents the impact of toxic chemical releases on multi-family and
+    subsidized housing parcels in Pierce County. The impact is evaluated using
+    multi-ring buffers with .5 mile intervals and a max of 2 miles away from
+    the toxic sites. Parcels within the buffer could be negatively impacted
+    (black). Parcels out of it are less affected (turquoise). More than half
+    of the parcels on that webmap are located within 2 miles of a toxic site.
+  </div>
+  <div id="mapid"></div>
+  <script src="webmap.js"></script>
+  <div id="References">
+    References: Pierce County, Environmental Protection Agency<br />
+    Basemap References: CARTO, ESRI, Wikimedia Foundation
+  </div>
+</body>
 </html>
