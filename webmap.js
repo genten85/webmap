@@ -9,15 +9,6 @@ var Esri = L.tileLayer(
         "pk.eyJ1IjoiZ2VudGVuIiwiYSI6ImNrMmdzOHFsdTA2Z2UzY252b3B1cjJqdXQifQ.B2doXxjSELmQIf7wIIDBZg"
     }
   ),
-  Wikimedia = L.tileLayer(
-    "https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png",
-    {
-      attribution:
-        '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>',
-      minZoom: 1,
-      maxZoom: 19
-    }
-  );
 
 Darkness = L.tileLayer(
   "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
@@ -32,12 +23,11 @@ Darkness = L.tileLayer(
 var map = L.map("mapid", {
   center: [47, -122.2],
   zoom: 10,
-  layers: [Esri, Wikimedia, Darkness]
+  layers: [Esri, Darkness]
 });
 
 var baseMaps = {
-  "Esri WorldImagery": Esri,
-  Wikimedia: Wikimedia,
+  "Esri World Imagery": Esri,
   Darkness: Darkness
 };
 
