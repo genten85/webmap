@@ -1,19 +1,9 @@
-#title {
-  display: flex;
-  flex-direction: row;
-  margin: 0px auto;
-  padding: 25px;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-}
 
 #summary {
   display: flex;
   flex-direction: row;
   margin: 0px auto;
-  padding: 50px;
+  padding: 25px;
   align-items: center;
   justify-content: center;
   color: white;
@@ -29,6 +19,7 @@
   padding: 0px;
   align-items: center;
   justify-content: center;
+  z-index: 0;
 }
 
 #references {
